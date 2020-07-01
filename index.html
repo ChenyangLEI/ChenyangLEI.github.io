@@ -110,6 +110,43 @@
           </tr>  -->
 
 
+          <tr onmouseout="videodepth_stop()" onmouseover="videodepth_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='videodepth_image'>
+                  <img src='images/depth_after.JPG' width="160"></div>
+                <img src='images/depth_before.JPG' width="160">
+              </div>
+              <script type="text/javascript">
+                function videodepth_start() {
+                  document.getElementById('videodepth_image').style.opacity = "1";
+                }
+
+                function videodepth_stop() {
+                  document.getElementById('videodepth_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/pdf/1912.12874.pdf">
+                <papertitle>Video Depth Estimation by Fusing Flow-to-Depth Proposals</papertitle>
+              </a>
+              <br>
+              Jiaxin Xie,
+              <strong>Chenyang Lei</strong>,
+              <a href="https://scholar.google.com/citations?user=gIBLutQAAAAJ&hl=en">Zhuwen Li</a>,
+              <a href="http://www.cs.columbia.edu/~lierranli/">Li Erran Li</a>,
+              <a href="http://cqf.io">Qifeng Chen</a>
+              <br>
+              <em>IROS </em>, 2020  
+              <br>
+              <a href="https://arxiv.org/pdf/1912.12874.pdf">arXiv</a>
+              <p></p>
+              <p>Depth is estimated by video.</p>
+            </td>
+          </tr>  
+
           <tr onmouseout="polar_rr_stop()" onmouseover="polar_rr_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -151,42 +188,7 @@
 
 
 
-          <tr onmouseout="videodepth_stop()" onmouseover="videodepth_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='videodepth_image'>
-                  <img src='images/depth_after.JPG' width="160"></div>
-                <img src='images/depth_before.JPG' width="160">
-              </div>
-              <script type="text/javascript">
-                function videodepth_start() {
-                  document.getElementById('videodepth_image').style.opacity = "1";
-                }
 
-                function videodepth_stop() {
-                  document.getElementById('videodepth_image').style.opacity = "0";
-                }
-                videodepth_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://arxiv.org/pdf/1912.12874.pdf">
-                <papertitle>Video Depth Estimation by Fusing Flow-to-Depth Proposals</papertitle>
-              </a>
-              <br>
-              Jiaxin Xie,
-              <strong>Chenyang Lei</strong>,
-              <a href="https://scholar.google.com/citations?user=gIBLutQAAAAJ&hl=en">Zhuwen Li</a>,
-              <a href="http://www.cs.columbia.edu/~lierranli/">Li Erran Li</a>,
-              <a href="http://cqf.io">Qifeng Chen</a>
-              <br>
-              <em>arXiv:1912.12874 </em>, 2019  
-              <br>
-              <a href="https://arxiv.org/pdf/1912.12874.pdf">arXiv</a>
-              <p></p>
-              <p>Depth is estimated by video.</p>
-            </td>
-          </tr>  
 
 
           <tr onmouseout="porshadmanip_stop()" onmouseover="porshadmanip_start()">
