@@ -108,7 +108,42 @@
               Training a tiny non-convolutional neural network to reproduce a scene using volume rendering achieves photorealistic view synthesis.</p>
             </td>
           </tr>  -->
+          
+          <tr onmouseout="DVP_stop()" onmouseover="DVP_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='DVP_image'>
+                  <img src='images/depth_after.JPG' width="160"></div>
+                <img src='images/depth_before.JPG' width="160">
+              </div>
+              <script type="text/javascript">
+                function DVP_start() {
+                  document.getElementById('DVP_image').style.opacity = "1";
+                }
 
+                function DVP_stop() {
+                  document.getElementById('DVP_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+<!--               <a href="https://arxiv.org/pdf/1912.12874.pdf"> -->
+                <papertitle>Blind Temporal Video Consistency via Deep Video Prior</papertitle>
+              </a>
+              <br>
+              <strong>Chenyang Lei*</strong>,
+              Yazhou Xing,
+              <a href="http://cqf.io">Qifeng Chen</a>
+              <br>
+              <em>NeruIPS </em>, 2020  
+              <br>
+<!--               <a href="https://arxiv.org/pdf/1912.12874.pdf">arXiv</a> -->
+              <p></p>
+              <p>Applying image processing algorithms independently to each video frame often leads to temporal inconsistency in the resulted video. To address this issue,
+                we present a novel and general approach for blind temporal video consistency. </p>
+            </td>
+          </tr>  
 
           <tr onmouseout="videodepth_stop()" onmouseover="videodepth_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
