@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173182823-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-173182823-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DVP: Deep Video Prior</title>
+    <meta name="author" content="Haoran Song">
+    <meta name="description" content="Project page of PiP-Planning-informed Trajectory Prediction for Autonomous Driving, ECCV 2020">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="eccv_logo.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Blind Video Temporal Consistency via<br /> 
+                Deep Video Prior<br />
+                <small>
+                    NeurIPS 2020
+                </small>
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="http://song-haoran.com/">
+                            Chenyang Lei*
+                        </a>
+                        <br />HKUST
+                    </li>
+
+                    <li>
+                        <a>
+                            Yazhou Xing*
+                        </a>
+                        <br />HKUST
+                    </li>
+
+                    <li>
+                        <a href="https://cqf.io/">
+                           Qifeng Chen
+                        </a>
+                        <br />HKUST
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+                Some more comments
+            </div>
+        </div> -->
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2003.11476">
+                            <img src="../images/DVP_paper.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtu.be/eN4BBVUJ2NQ">
+                            <img src="../images/youtube_icon.png" height="120px"><br>
+                                <h4><strong>Talk</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ChenyangLEI/deep-video-prior">
+                            <img src="../images/github_icon.png" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Example Results
+                </h3>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="lighthouse_results.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div> -->
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Applying image processing algorithms independently to each video frame often
+                    leads to temporal inconsistency in the resulting video. To address this issue, we
+                    present a novel and general approach for blind video temporal consistency. Our
+                    method is only trained on a pair of original and processed videos directly instead
+                    of a large dataset. Unlike most previous methods that enforce temporal consistency
+                    with optical flow, we show that temporal consistency can be achieved by training
+                    a convolutional network on a video with the Deep Video Prior. Moreover, a
+                    carefully designed iteratively reweighted training strategy is proposed to address the
+                    challenging multimodal inconsistency problem. We demonstrate the effectiveness
+                    of our approach on 7 computer vision tasks on videos. Extensive quantitative and
+                    perceptual experiments show that our approach obtains superior performance than
+                    state-of-the-art methods on blind video temporal consistency. Our source codes are
+                    publicly available at github.com/ChenyangLEI/deep-video-prior.
+                </p>
+            </div>
+        </div>
+
+        
+        <!-- ##### Overview video #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                  Technical Video
+              </h3>
+              <div class="text-center">
+                  <div style="position:relative;padding-top:56.25%;">
+                      <!-- <iframe src="https://youtu.be/07A3aRF4s0g" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/07A3aRF4s0g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- ##### Motivation & Key idea #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Motivation & Key idea
+              </h3>
+              <p class="text-justify">
+We propose a general and simple framework, utilizing the Deep Video Prior by training a convolutional
+network on videos: the outputs of CNN for corresponding patches in video frames should be
+consistent. This prior allows to recover most video information first before the flickering artifacts are
+eventually overfitted. Our framework does not enforce any handcrafted temporal regularization to
+improve temporal consistency, while previous methods are built upon enforcing feature similarity for
+correspondences among video frames [3, 19, 39]. Our idea is related to DIP (Deep Image Prior [37]),
+which observes that the structure of a generator network is sufficient to capture the low-level statistics
+of a natural image. They take noise as input and train the network to reconstruct an image. The
+network performs effectively to inverse problems such as image denoising, image inpainting and
+super-resolution. For instance, the noise-free image will be reconstructed before the noise, since it
+follows the prior represented by the network. We conjecture that the flickering artifacts in a video are
+similar to the noise in the temporal domain, which can be corrected by deep video prior.
+              </p>
+<!--               <img src="pip_bg.png" class="img-responsive" alt="bac">
+ -->              
+
+
+          </div>
+        </div>
+
+        <!-- ##### Architecture #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                  Architecture
+              </h3>
+              <img src="Landscape.png" class="img-responsive" alt="PiP Architecture overview" class="center"><br>
+              <p class="text-justify">
+
+                            We propose to use a fully convolutional network to mimic the original image
+operator f while preserving temporal consistency. Only a single video
+is used for training the network and only a single frame is used in each iteration. We initialize the network randomly, and
+then it can be optimized in each iteration with a single data term without any explicit regularization:
+
+              </p>
+          </div>
+        </div>
+        
+        <!-- ##### BibTex #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{lei2020dvp,
+  title={Blind Video Temporal Consistency via Deep Video Prior},
+  author={Lei, Chenyang and Xing, Yazhou and Chen, Qifeng},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2020}
+}
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
