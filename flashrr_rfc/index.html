@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Robust Reflection Removal with Reflection-free Flash-only Cues</title>
+    <meta name="author" content="Chenyang Lei">
+    <meta name="description" content="Project page of Robust Reflection Removal with Reflection-free Flash-only Cues, CVPR 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="cvpr.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Robust Reflection Removal with Reflection-free Flash-only Cues <br /> 
+                <small>
+                    CVPR 2021
+                </small>
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://chenyanglei.github.io/">
+                            Chenyang Lei
+                        </a>
+
+                        <br /> HKUST
+                    </li>
+
+
+                    <li>
+                        <a href="https://cqf.io/">
+                           Qifeng Chen
+                        </a>
+                        <br /> HKUST
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+                Some more comments
+            </div>
+        </div> -->
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/pdf/2103.04273.pdf">
+                            <img src="../images/DVP_paper.PNG" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+<!--                             <a href="https://youtu.be/eN4BBVUJ2NQ"> -->
+                            <a href="https://www.youtube.com/watch?v=AUb5XEjVAh4">
+                            <img src="../images/youtube_icon.png" height="120px"><br>
+                                <h4><strong>Talk (To be released)</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ChenyangLEI/flash-reflection-removal">
+                            <img src="../images/github_icon.png" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Example Results
+                </h3>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="lighthouse_results.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+           <table>
+           <tr>
+               <td><img src="../flashrr_rfc/flash_before.jpg"  height="155" width="155" align="center"></td>
+               <td><img src="../flashrr_rfc/flash.jpg"  height="155" width="155" align="center"></td>
+               <td><img src="../flashrr_rfc/flashonly.jpg"  height="155" width="155" align="center"></td>
+               <td><img src="../flashrr_rfc/flash_after.jpg"  height="155" width="155" align="center"></td>
+               <td><img src="../flashrr_rfc/GT.jpg"  height="155" width="155" align="center"></td>
+
+           </tr>
+
+           <tr>
+               <td align="center">Input ambient image </td>
+               <td align="center">Input flash image</td>
+               <td align="center">Flash-only image</td>
+               <td align="center">Ours</td>
+               <td align="center">Ground truth</td>
+
+           </tr>
+
+                </table>
+
+          </div>
+        </div>
+
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Reflection-free Flash-only Cues (RFC).
+                </h3>
+                <h4>
+                    What is flash-only? 
+                </h4>
+                    <li>  Flash-only image = Flash image - Ambient image on linear space. <br>
+
+                    <li> The flash-only image is equivalent to an image captured in a completely dark environment. However, it is not directly captured in the dark. Instead, it is obtained by subtracting the ambient image from the corresponding flash image in raw data space. 
+                <h4>
+                    Why is it reflection-free?
+                </h4>
+                    <li> Objects in reflection barely illuminated and reflections do not appear in flash-only images.
+                <h4>
+                    Why is the reflection-free flash-only cue (RFC) robust?
+                </h4>
+                    <li> This cue is robust since it is independent of the appearance and strength of reflection. 
+                    <li> The flash-only image can be obtained under arbitrary illumination.
+            </div>
+        </div>
+
+        
+
+        <!-- ##### Motivation & Key idea #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                Motivation
+              </h3>
+              <p class="text-justify">
+
+            <ul>
+              <li>Most existing reflection removal methods impose strict assumptions on reflection (e.g., the reflection is blurry).
+              <li>Algorithms might fail when the apperance of real-world reflection is different with the assumption.
+              <li>Can we find a cue so that different reflection can be robustly removed?
+              <li>Our proposed cue can remove sharp or blurry reflection, weak or strong reflection, reflection with the ghosting cue or not.
+            </li>
+            </ul>
+
+
+
+              </p>
+        </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+                    @InProceedings{Lei_2021_RFC,
+                        title={Robust Reflection Removal with Reflection-free Flash-only Cues}, 
+                        author={Chenyang Lei and Qifeng Chen},
+                        booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+                        year = {2021}
+                    }
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
