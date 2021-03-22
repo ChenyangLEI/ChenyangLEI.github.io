@@ -2,7 +2,7 @@ import imageio
 import numpy as np
 from glob import glob 
 
-img_names = sorted(glob("*png")) + sorted(glob("*jpg"))
+img_names = sorted(glob("*png")) + sorted(glob("*jpg")) + sorted(glob("*PNG")) + sorted(glob("*JPG"))
 
 print(len(img_names))
 for idx, img_name in enumerate(img_names):
