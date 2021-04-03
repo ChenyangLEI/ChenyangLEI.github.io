@@ -190,7 +190,7 @@
               <br>
               <em>CVPR </em>, 2021  
               <br>
-              <!-- <a href="https://arxiv.org/abs/2010.11838">arxiv</a> /  -->
+              <a href="https://cqf.io/papers/Neural_Camera_Simulators_CVPR2021.pdf">paper</a>  
 <!--               <a href="https://github.com/ChenyangLEI/deep-video-prior">code</a> /  -->
               <!-- <a href="DVP/index.html">project website</a> -->
               <p></p>
@@ -198,20 +198,20 @@
             </td>
           </tr>  
 
-          <tr onmouseout="DVP_stop()" onmouseover="DVP_start()">
+          <tr onmouseout="sim_stop()" onmouseover="sim_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='DVP_image'>
-                  <img src='images/DVP_after.JPG' width="160"></div>
-                <img src='images/DVP_before.JPG' width="160">
+                <div class="two" id='sim_image'>
+                  <img src='images/simulator_before.PNG' width="160"></div>
+                <img src='images/simulator_after.PNG' width="160">
               </div>
               <script type="text/javascript">
-                function DVP_start() {
-                  document.getElementById('DVP_image').style.opacity = "1";
+                function sim_start() {
+                  document.getElementById('sim_image').style.opacity = "1";
                 }
 
-                function DVP_stop() {
-                  document.getElementById('DVP_image').style.opacity = "0";
+                function sim_stop() {
+                  document.getElementById('sim_image').style.opacity = "0";
                 }
                 videodepth_stop()
               </script>
