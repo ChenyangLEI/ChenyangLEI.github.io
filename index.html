@@ -78,7 +78,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                I'm interested in Low-level vision, Computational photography, Image and video synthesis, Image and video processing, and 3D vision.
+                I'm interested in Computational photography, Video temporal consistency, Polarization in vision and 3D vision.
               </p>
             </td>
           </tr>
@@ -87,6 +87,42 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="sfp_stop()" onmouseover="sfp_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='sfp_image'>
+                  <img src='images/sfp_after.png' width="160"></div>
+                <img src='images/sfp_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function sfp_start() {
+                  document.getElementById('sfp_image').style.opacity = "1";
+                }
+
+                function sfp_stop() {
+                  document.getElementById('sfp_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>Shape from Polarization for Complex Scenes in the Wild</papertitle>
+              </a>
+              <br>
+              <strong>Chenyang Lei*</strong>,
+              Chenyang Qi*,
+              Jiaxin Xie*,
+              Na Fan, 
+              <a href="http://vladlen.info/">Vladlen Koltun </a>, 
+              <a href="http://cqf.io">Qifeng Chen</a>
+              <br>
+              <em>In Submission </em>, 2021  
+              <br>
+              <!-- <a href=""></a>  -->
+              <p></p>
+              <p>We present a new data-driven approach with physics-based priors to scene-level normal estimation from a single polarization image. </p>
+            </td>
+          </tr>  
           <tr onmouseout="DVPvp_stop()" onmouseover="DVPvp_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -447,7 +483,7 @@
             <td>
               <heading>Services</heading>
                 <ul>
-                  <li>Program Committee/Reviewers: CVPR, ICCV, IJCV, AAAI, IJCAI, IROS, TVCG
+                  <li>Program Committee/Reviewers: CVPR, ICCV, IJCV, AAAI, TIP, IJCAI, IROS, TVCG
                 </ul>
             </td>
           </tr>
@@ -458,6 +494,7 @@
             <td>
               <heading>Honors and Awards</heading>
                 <ul>
+                  <li>RedBird PhD Scholarship, HKUST, 2021</li>
                   <li>SENG Academic Award for Continuing PhD students, HKUST, 2020</li>
                   <li>National Scholarship, 2017</li>
                   <li>Outstanding Graduate (Zhejiang University), 2018</li>            
