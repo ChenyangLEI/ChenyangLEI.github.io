@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shape from Polarization for Complex Scenes in the Wild</title>
+    <meta name="author" content="Chenyang Lei">
+    <meta name="description" content="Project page of Robust Reflection Removal with Reflection-free Flash-only Cues, CVPR 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="cvpr.png">
+    <!-- Format -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="../format/app.css">
+    <link rel="stylesheet" href="../format/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="../format/app.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Shape from Polarization for Complex Scenes in the Wild<br /> 
+                <small>
+                    arxiv
+                </small>
+            </h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://chenyanglei.github.io/">
+                            Chenyang Lei
+                        </a>
+
+                        <br /> HKUST
+                    </li>
+
+                    <li>
+                        <a>
+                            Chenyang Qi 
+                        </a>
+
+                        <br /> HKUST
+                    </li>
+
+                    <li>
+                        <a >
+                            Jiaxin Xie
+                        </a>
+
+                        <br /> HKUST
+                    </li>
+                    <li>
+                        <a >
+                            Na Fan 
+                        </a>
+
+                        <br /> HKUST
+                    </li>
+
+                    <li>
+                        <a >
+                            Vladlen Koltun 
+                        </a>
+
+                        <br /> Apple
+                    </li>
+
+
+
+                    <li>
+                        <a href="https://cqf.io/">
+                           Qifeng Chen
+                        </a>
+                        <br /> HKUST
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+                Some more comments
+            </div>
+        </div> -->
+
+        <!-- ##### Elements #####-->
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="">
+                            <img src="../images/DVP_paper.PNG" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ChenyangLEI/flash-reflection-removal">
+                            <img src="../images/github_icon.png" height="120px"><br>
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Example Results
+                </h3>
+                <video id="v0" width="100%" autoplay loop muted controls>
+                  <source src="lighthouse_results.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+           <table>
+           <tr>
+               <td><img src="../sfpwild/sfp.png"  align="center"></td>
+           </tr>
+
+
+                </table>
+
+          </div>
+        </div>
+
+
+        <!-- ##### Abstract #####-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                   Abstract 
+                </h3>
+                <p>
+                    We present a new data-driven approach with physics-based priors to scene-level normal estimation from a single polarization image. Existing shape from polarization (SfP) works mainly focus on estimating the normal of a single object rather than complex scenes in the wild. A key barrier to high-quality scene-level SfP is the lack of real-world SfP data in complex scenes. Hence, we contribute the first real-world scene-level SfP dataset with paired input polarization images and ground-truth normal maps. Then we propose a learning-based framework with a multi-head self-attention module and viewing encoding, which is designed to handle increasing polarization ambiguities caused by complex materials and non-orthographic projection in scene-level SfP. Our trained model can be generalized to far-field outdoor scenes as the relationship between polarized light and surface normals is not affected by distance. Experimental results demonstrate that our approach significantly outperforms existing SfP models on two datasets. Our dataset and source code will be publicly available at \url{https://github.com/ChenyangLEI/sfp-wild}.
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                  Files 
+                </h3>
+                <li> Paper (<a href="">pdf</a>) </li>
+                <li> Supplement (<a href="">pdf</a>) </li>
+                <li> Dataset (<a href="">to be released</a>) </li>
+
+            </div>
+        </div>
+
+
+        <!-- ##### Motivation & Key idea #####-->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+               Importance of polarization 
+              </h3>
+              <p class="text-justify">
+
+            <ul>
+              <li> Passive sensing: the polarization camera is a passive sensor that is not constrained to a
+                specific depth range.
+              <li> Dense geometry cues: the polarization images can provide dense surface orientation cues from the polarized light perceived at each pixel.           
+              <li> Physics-based cues: the polarization cues are based on real-world reflections.
+            </li>
+            </ul>
+
+
+
+              </p>
+        </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+               Physics-based cues
+              </h3>
+              <p class="text-justify">
+
+
+
+              </p>
+        </div>
+        </div>
+
+
+ 
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <p>Note that polarization conveys the underlying physical shape. The estimated normal maps are not distrated by the semantics in a printed picture attached to a wall. </p>
+           <table>
+           <tr>
+               <td><img src="../sfpwild/predictions_00096_input.jpg"  height="" width="240" align="center"></td>
+               <td><img src="../sfpwild/predictions_00096_phi.jpg"  height="" width="240" align="center"></td>
+               <td><img src="../sfpwild/xtconsistency.jpg"  height="" width="240" align="center"></td>
+               <td><img src="../sfpwild/predictions_00096_normal.jpg"  height="" width="240" align="center"></td>
+
+           </tr>
+           <!-- <tr>
+               <td><img src="../sfpwild/set_0005_polar.jpg"  height="" width="240" align="center"></td>
+               
+               <td><img src="../sfpwild/set_0005_polar_phi.jpg"  height="" width="240" align="center"></td>
+               <td><img src="../sfpwild/set_0005_polar.png"  height="" width="240" align="center"></td>
+
+           </tr>
+ -->
+
+           <tr>
+               <td align="center">Input unpolarized intensity </td>
+               <td align="center">Input polarization angle </td>
+               <td align="center">RGB-based methods</td>
+               <td align="center">Ours</td>
+
+           </tr>
+
+                </table>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+               Passive sensing
+              </h3>
+              <p class="text-justify">
+
+
+
+              </p>
+        </div>
+        </div>
+
+
+ 
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <p>Although our model is trained on near-field content, it appears to successfully generalize to large-scale outdoor scenes.  </p>
+           <table>
+           <tr>
+               <td><img src="../sfpwild/LUCID_PHX050S-P_182300181__20210126170505854_image2.jpg"  height="" width="360" align="center"></td>
+               <td><img src="../sfpwild/LUCID_PHX050S-P_182300181__20210126170505854_image2_polar.jpg"  height="" width="359" align="center"></td>
+           </tr>
+           <!-- <tr>
+               <td><img src="../sfpwild/set_0005_polar.jpg"  height="" width="240" align="center"></td>
+               
+               <td><img src="../sfpwild/set_0005_polar_phi.jpg"  height="" width="240" align="center"></td>
+               <td><img src="../sfpwild/set_0005_polar.png"  height="" width="240" align="center"></td>
+
+           </tr>
+ -->
+
+           <tr>
+               <td align="center">Input unpolarized intensity </td>
+               <td align="center">Ours</td>
+
+           </tr>
+
+                </table>
+
+          </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+                        To be released.
+                   </textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
