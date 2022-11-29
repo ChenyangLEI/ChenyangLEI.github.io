@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="All-in-one Deflicker for Video Capturing, Processing, and Generation">
+  <meta name="keywords" content="Deflicker, Temporal Consistency, Video Processing, Video Generation, Video Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All-in-one Deflicker for Video Capturing, Processing, and Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+  </script> -->
+  <style>
+  .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">All-in-one Video Deflicker <br></h1>
+          <!-- <h1 class="title is-2 publication-title"> <br> </h1> -->
+          <h2 class="title is-4 publication-title">Blind Deflickering by Neural Filtering with a Flawed Atlas</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://chenyanglei.github.io/">Chenyang Lei</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://xiaolonw.github.io/">Xuanchi Ren</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://zhaoxiangzhang.net/">Zhaoxiang Zhang</a><sup>1</sup>,</span> 
+            <span class="author-block">
+              <a href="https://cqf.io/">Qifeng Chen</a><sup>3</sup></span>
+            <span class="author-block">
+
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>CAIR, HKISI_CAS </span>
+            <span class="author-block"><sup>2</sup>University of Toronto</span>
+            <span class="author-block"><sup>3</sup>HKUST</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">arxiv</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ren_Look_Outside_the_Room_Synthesizing_a_Consistent_Long-Term_3D_Scene_CVPR_2022_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2203.09457"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://youtu.be/eSftXilv21s"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Slide Link. -->
+              <!-- <span class="link-block">
+                <a href="look-outside.pptx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-slideshare"></i>
+                  </span>
+                  <span>Slide</span>
+                </a> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/xrenaa/Look-Outside-Room"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Comparsion -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./static/videos/text_to_video_2.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./static/videos/old_movie_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./static/videos/colorization_withtitle.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./static/videos/slow_motion_withtitle.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        A general postprocessing framework that removes flicker for video capturing, processing, and generation without user guidance.<br>
+      </h2>
+      <ol>
+        <li> Video capturing: unprocessed flickering videos like old movies, slow-motion videos and timelapse videos. <br>
+        </li>
+        <li> Video processing: videos processed by various processing algorithms like colorization, enhancement, dehazing, and so on.
+        </li>
+        <li> Video generation: X-to-video results that are provided by <a href="https://makeavideo.studio/">Make-a-Video</a>
+            and <a href="https://makeavideo.studio/">MagicVideo</a>.
+        </li>
+      </ol>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Many videos contain flickering artifacts for different reasons. Prior works usually utilize guidances for specific flickering types, including the flickering frequency, manual annotations, and extra consistent videos. In this work, we propose a general framework that $(i)$ only receives a single flickering video (without any extra guidance) and $(ii)$ removes diverse flickers. Since it is blind to a specific flickering type and does not require flickering knowledge, we name this ``blind deflickering.'' The key of our approach is utilizing the neural atlas in cooperation with a neural filtering strategy. The atlas is a unified presentation for all video frames that provide temporal consistency guidance but is flawed in many cases. To this end, a neural network is trained to mimic a filter to learn the consistent features (e.g., color, brightness) and avoid introducing the artifacts in the atlas in blind deflickering. To validate our method, we construct the first benchmark that contains diverse real-world flickering videos. Extensive experiments show that our method achieves satisfying performance and even outperforms baselines using extra guidance on a public benchmark. Source code and dataset will be publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+   <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Blind deflickering results</h2>
+        <h2 class="title is-4">(1) Unprocessed flickering videos</h2>
+      </div>
+    </div>
+    <div>
+        <p>Unprocessed videos can contain flicker due to various reasons. 
+          For example, the brightness of old movies can be very unstable since some old cameras cannot set the exposure time of each frame to be the same with low-quality hardware. 
+          Besides, indoor lighting changes with a certain frequency and high-speed cameras can capture the rapid changes of indoor lighting. </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Comparsion -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-old-movie">
+          <video poster="" id="old-movie" autoplay controls muted loop height="100%">
+            <source src="./static/videos/old_movie.mp4"
+                    type="video/mp4">
+          </video>
+          <!-- <div class="column"> -->
+            <!-- <img src="./static/videos/colorization_text.png" /> -->
+          <!-- </div> -->
+        </div>
+
+        <div class="item item-slow-motion">
+          <video poster="" id="slow-motion" autoplay controls muted loop height="100%">
+            <source src="./static/videos/slowmotion.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-slow-motion">
+          <video poster="" id="slow-motion" autoplay controls muted loop height="100%">
+            <source src="./static/videos/Betty3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-timelapse">
+          <video poster="" id="timelapse" autoplay controls muted loop height="100%">
+            <source src="./static/videos/timelapse.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-timelapse">
+          <video poster="" id="timelapse" autoplay controls muted loop height="100%">
+            <source src="./static/videos/clock2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-st">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="./static/videos/old_cartoon.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">(2) Generated flickering videos</h2>
+      </div>
+    </div>
+    <div >
+        <p>The videos obtained by video generation methods might be temporal inconsistent. 
+          Our approach can used to remove the flicker without any guidance.
+          In the following videos, we improve the results of a video generation method <a href="https://makeavideo.studio/">Make-a-Video</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Comparsion -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-old-movie">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./static/videos/meta_make_a_video/astronaut.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./static/videos/meta_make_a_video/book.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./static/videos/meta_make_a_video/ship.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./static/videos/meta_make_a_video/rabbit.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+
+        <div class="item item-st">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="./static/videos/meta_make_a_video/horse.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">(3) Processed flickering videos</h2>
+      </div>
+    </div>
+    <div >
+        <p>A temporal consistent unprocessed video might suffer from flickering artifacts after being processed by algorithms. 
+          For example, a colorization algorithm can introduce flickers when it is applied to videos, as discussed in <a href="https://github.com/ChenyangLEI/deep-video-prior">Deep Video Prior</a>. 
+          Our approach can improve the temporal consistency for videos processed by different processing algorithms.
+        </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Comparsion -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-old-movie">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./static/videos/camel.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-old-movie">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./static/videos/blackswan.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./static/videos/Haze2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./static/videos/car-roundabout.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+        <div class="item item-st">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="./static/videos/car-shadow.mp4"
+                    type="video/mp4">
+          </video> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            We first generate an atlas as a unified representation of the whole video, providing consistent guidance for deflickering. Since the atlas is flawed, we then propose a neural filtering strategy to filter the flaws. 
+          </p>
+          <div class="column">
+            <img src="./static/images/method_deflicker.png" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--/ Look closer. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="hr"></div>
+    <div class="columns is-centered">
+
+      <!-- Setup -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Attention Maps</h2>
+          <p>
+            Given the output image in the future and the input image, we visualize bias on the input image corresponding to a patch on the output image. This visualization indicates when the patch is synthesized, what information contributes the most in the input image. We can see most contributions come from the patches in nearby locations along the trajectory. 
+          </p>
+          <img src="static/images/attention_map_new.png"/>
+        </div>
+      </div> -->
+
+      <!-- Views-->
+      <!-- <div class="column">
+        <h2 class="title is-3">Ablation Study</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              We report some ablations of our method in terms of longterm view synthesis on the Matterport3D dataset. Camera-Aware Bias and decoupled positional embedding improve the image quality and the consistency between frames. Finetuning the model by stimulating error accumulation benefits the longterm view synthesis.
+            </p>
+            <img src="static/images/ablation.png"/>
+          </div>
+
+        </div>
+      </div> -->
+    </div>
+
+    <!-- <div class="hr"></div> -->
+    
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>To be release
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://xuanchiren.com/pub/cvpr2022_submission.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/xrenaa/Look-Outside-Room" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <div class="columns is-centered"><p>
+            This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Here</a>. Thank you!
+          </p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
