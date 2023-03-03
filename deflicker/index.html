@@ -105,6 +105,7 @@
         A general postprocessing framework that removes flicker for video capturing, processing, and generation without user guidance.<br>
       </h2> -->
       <ol>
+        <br>
         <li> Video capturing: unprocessed flickering videos like old movies, slow-motion videos and timelapse videos. <br>
         </li>
         <li> Video processing: videos processed by various processing algorithms like colorization, enhancement, dehazing, and so on.
@@ -136,9 +137,9 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://chenyanglei.github.io/">Chenyang Lei</a><sup>1</sup>,</span>
+              <a href="https://chenyanglei.github.io/">Chenyang Lei*</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://xuanchiren.com/">Xuanchi Ren</a><sup>2</sup>,</span>
+              <a href="https://xuanchiren.com/">Xuanchi Ren*</a><sup>2,4</sup>,</span>
             <span class="author-block">
               <a href="https://zhaoxiangzhang.net/">Zhaoxiang Zhang</a><sup>1</sup>,</span> 
             <span class="author-block">
@@ -149,13 +150,15 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>CAIR, HKISI_CAS </span>
+            <span class="author-block"><sup>1</sup>CAIR, HKISI-CAS </span>
             <span class="author-block"><sup>2</sup>University of Toronto</span>
             <span class="author-block"><sup>3</sup>HKUST</span>
+            <span class="author-block"><sup>4</sup>Vector Institute</span>
+
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">arxiv</span>
+            <span class="author-block">CVPR 2023</span>
           </div>
 
           <div class="column has-text-centered">
@@ -231,7 +234,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Many videos contain flickering artifacts for different reasons. Prior works usually utilize guidances for specific flickering types, including the flickering frequency, manual annotations, and extra consistent videos. In this work, we propose a general framework that $(i)$ only receives a single flickering video (without any extra guidance) and $(ii)$ removes diverse flickers. Since it is blind to a specific flickering type and does not require flickering knowledge, we name this ``blind deflickering.'' The key of our approach is utilizing the neural atlas in cooperation with a neural filtering strategy. The atlas is a unified presentation for all video frames that provide temporal consistency guidance but is flawed in many cases. To this end, a neural network is trained to mimic a filter to learn the consistent features (e.g., color, brightness) and avoid introducing the artifacts in the atlas in blind deflickering. To validate our method, we construct the first benchmark that contains diverse real-world flickering videos. Extensive experiments show that our method achieves satisfying performance and even outperforms baselines using extra guidance on a public benchmark. Source code and dataset will be publicly available.
+            Many videos contain flickering artifacts for different reasons. Prior works usually utilize guidances for specific flickering types, including the flickering frequency, manual annotations, and extra consistent videos. In this work, we propose a general framework that (i) only receives a single flickering video (without any extra guidance) and (ii) removes diverse flickers. Since it is blind to a specific flickering type and does not require flickering knowledge, we name this “blind deflickering.” The key of our approach is utilizing the neural atlas in cooperation with a neural filtering strategy. The atlas is a unified presentation for all video frames that provide temporal consistency guidance but is flawed in many cases. To this end, a neural network is trained to mimic a filter to learn the consistent features (e.g., color, brightness) and avoid introducing the artifacts in the atlas in blind deflickering. To validate our method, we construct the first benchmark that contains diverse real-world flickering videos. Extensive experiments show that our method achieves satisfying performance and even outperforms baselines using extra guidance on a public benchmark. Source code and dataset will be publicly available.
           </p>
         </div>
       </div>
@@ -500,7 +503,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>To be release
+    <pre><code>@InProceedings{Lei_2023_CVPR,
+      author    = {Lei, Chenyang and Ren, Xuanchi and Zhang, Zhaoxiang and Chen, Qifeng},
+      title     = {Blind Deflickering by Neural Filtering with a Flawed Atlas},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      month     = {June},
+      year      = {2023},
+  }
+  
 </code></pre>
   </div>
 </section>
