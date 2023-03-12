@@ -172,6 +172,41 @@
       </tr>  
 
 
+          <tr onmouseout="DVPvp_stop()" onmouseover="DVPvp_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='DVPvp_image'>
+                  <img src='images/dvpvp_after.png' width="160"></div>
+                <img src='images/dvpvp_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function DVPvp_start() {
+                  document.getElementById('DVPvp_image').style.opacity = "1";
+                }
+
+                function DVPvp_stop() {
+                  document.getElementById('DVPvp_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>Deep Video Prior for Video Consistency and Propagation</papertitle>
+              </a>
+              <br>
+              <strong>Chenyang Lei</strong>,
+              Yazhou Xing,
+              Hao Ouyang, 
+              <a href="http://cqf.io">Qifeng Chen</a>
+              <br>
+              <em>TPAMI </em>, 2022  
+              <br>
+              <a href="https://github.com/ChenyangLEI/deep-video-prior">code</a> 
+              <p></p>
+              <p>We extend the deep video prior (NeurIPS 2020) to video propagation. We also improve the training efficiency for deep video prior. </p>
+            </td>
+          </tr>  
+
           <tr onmouseout="sfp_stop()" onmouseover="sfp_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -247,40 +282,6 @@
               <p>We present a novel approach to automatic image colorization by imitating the imagination process of human experts. </p>
             </td>
  
-          <tr onmouseout="DVPvp_stop()" onmouseover="DVPvp_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='DVPvp_image'>
-                  <img src='images/dvpvp_after.png' width="160"></div>
-                <img src='images/dvpvp_before.png' width="160">
-              </div>
-              <script type="text/javascript">
-                function DVPvp_start() {
-                  document.getElementById('DVPvp_image').style.opacity = "1";
-                }
-
-                function DVPvp_stop() {
-                  document.getElementById('DVPvp_image').style.opacity = "0";
-                }
-                videodepth_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Deep Video Prior for Video Consistency and Propagation</papertitle>
-              </a>
-              <br>
-              <strong>Chenyang Lei</strong>,
-              Yazhou Xing,
-              Hao Ouyang, 
-              <a href="http://cqf.io">Qifeng Chen</a>
-              <br>
-              <em>TPAMI </em>, 2021  
-              <br>
-              <a href="https://github.com/ChenyangLEI/deep-video-prior">code</a> 
-              <p></p>
-              <p>We extend the deep video prior (NeurIPS 2020) to video propagation. We also improve the training efficiency for deep video prior. </p>
-            </td>
-          </tr>  
 
           <tr onmouseout="flash_stop()" onmouseover="flash_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
