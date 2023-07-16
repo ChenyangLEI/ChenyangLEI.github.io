@@ -96,20 +96,98 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <tr onmouseout="inv3d_stop()" onmouseover="inv3d_start()">
+          <tr onmouseout="augmentation_stop()" onmouseover="augmentation_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='inv3d_image'>
+                <div class="two" id='augmentation_image'>
+                  <img src='images/augmentation.png' width="160"></div>
+                <img src='images/augmentation.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function augmentation_start() {
+                  document.getElementById('augmentation_image').style.opacity = "1";
+                }
+          
+                function augmentation_stop() {
+                  document.getElementById('augmentation_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>Randomized Quantization for Data Agnostic Representation Learning </papertitle>
+          </a>
+          <br>
+          Huimin Wu*,
+          <strong>Chenyang Lei*</strong>,
+          Xiao Sun, Peng-Shuai Wang, 
+          <a href="http://cqf.io">Qifeng Chen,</a>
+          Kwang-Ting Cheng, Stephen Lin, Zhirong Wu 
+          <br>
+          <em>ICCV</em>, 2023
+          <br>
+          <a href="https://arxiv.org/abs/2212.08663">arxiv</a> / 
+          <a href="">project website</a> /
+          <a href="https://github.com/microsoft/random_quantize">code</a>
+          <p></p>
+          <p>A modality-agnostic augmentation for constrative learning, which can be applied to image, audio, pointclouds, sensors and other modalities.</p>
+          </td>
+          </tr>  
+
+          <tr onmouseout="fatezero_stop()" onmouseover="fatezero_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='fatezero_image'>
+                  <img src='fatezero/fatezero.gif' width="160"></div>
+                <img src='fatezero/fatezero.gif' width="160">
+              </div>
+              <script type="text/javascript">
+                function fatezero_start() {
+                  document.getElementById('fatezero_image').style.opacity = "1";
+                }
+          
+                function fatezero_stop() {
+                  document.getElementById('fatezero_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>FateZero: Fusing Attentions for Zero-shot Text-based Video Editing  </papertitle>
+          </a>
+          <br>
+          Chenyang Qi,
+          Xiaodong Cun,
+          Yong Zhang,
+          <strong>Chenyang Lei</strong>,
+          Xintao Wang,
+          Ying Shan,
+          <a href="http://cqf.io">Qifeng Chen</a>
+          <br>
+          <em>ICCV</em>, 2023
+          <br>
+          <a href="https://arxiv.org/abs/2303.09535">arxiv</a> / 
+          <a href="https://fate-zero-edit.github.io/">project website</a> /
+          <a href="https://github.com/ChenyangQiQi/FateZero">code</a>
+          <p></p>
+          <p>A zero-shot text-driven video style and local attribute editing model.</p>
+          </td>
+          </tr>  
+
+          <tr onmouseout="deflicker_stop()" onmouseover="deflicker_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='deflicker_image'>
                   <img src='images/deflicker.png' width="160"></div>
                 <img src='images/deflicker.png' width="160">
               </div>
               <script type="text/javascript">
-                function inv3d_start() {
-                  document.getElementById('inv3d_image').style.opacity = "1";
+                function deflicker_start() {
+                  document.getElementById('deflicker_image').style.opacity = "1";
                 }
 
-                function inv3d_stop() {
-                  document.getElementById('inv3d_image').style.opacity = "0";
+                function deflicker_stop() {
+                  document.getElementById('deflicker_image').style.opacity = "0";
                 }
                 videodepth_stop()
               </script>
@@ -132,7 +210,7 @@
           <p></p>
           <p>We present a general postprocessing framework that can remove different types of flicker from various videos, including videos from video capturing, processing, and generation.</p>
         </td>
-      </tr>  
+      </tr>   
 
           <tr onmouseout="inv3d_stop()" onmouseover="inv3d_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
