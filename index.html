@@ -42,11 +42,11 @@
               <p style="text-align:center">
                 <a href="mailto:leichenyang7@gmail.com">Email</a> &nbsp/&nbsp
                 <a href="images/Chenyang_Lei__CV.pdf">CV</a> &nbsp/&nbsp 
-                <a href="https://github.com/ChenyangLEI">Github</a> &nbsp/&nbsp 
-                <!-- <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp -->
-                <!-- <a href="data/JonBarron-bio.txt">Biography</a> &nbsp/&nbsp -->
                 <a href="https://scholar.google.com/citations?user=CuGF_pEAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E9%9B%B7-73565b149/">Linked In</a>
+                <a href="https://www.linkedin.com/in/%E6%99%A8%E9%98%B3-%E9%9B%B7-73565b149/">Linked In</a>  &nbsp/&nbsp 
+                <a href="https://github.com/ChenyangLEI">Github</a> &nbsp/&nbsp 
+                <a href="https://twitter.com/Thor78639964">Twitter</a>  
+
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -90,13 +90,147 @@
               <p>
                 I am interested in exploring system designs of visual computing pipelines, from advanced sensing technologies to more capable artificial intelligence. 
               </p>
+
+                My current research topics include:
+              <ul>
+                <li><strong>Computational imaging and photography</strong></li>
+                <li><strong>Video processing, editing, and generation</strong></li>
+                <li><strong>3D from sensors and multiviews</strong></li>
+                <li><strong>Modality-agnostic foundation models</strong></li>
+              </ul>
+
               <!-- <p>()</p> -->
             </td>
+
+            
           </tr>
+
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Publication</heading>
+              <p>
+              </p>
+                            
+            </td>
+
+            
+          </tr>
+
         </tbody></table>
 
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+
+
+          <tr onmouseout="pollidar_stop()" onmouseover="pollidar_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='pollidar_image'>
+                  <img src='images/pollidar_after.png' width="160"></div>
+                <img src='images/pollidar_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function pollidar_start() {
+                  document.getElementById('pollidar_image').style.opacity = "1";
+                }
+          
+                function pollidar_stop() {
+                  document.getElementById('pollidar_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>Polarization Wavefront Lidars: Learning to Recover Large-Scale Scene Information from Polarized Wavefronts
+            </papertitle>
+          </a>
+          <br>
+          Dominik Scheuble*,
+          <strong>Chenyang Lei*</strong>,
+          Mario Bijelic, Seung-Hwan Baek, 
+          Felix Heide 
+          <br>
+          <em>CVPR</em>, 2024
+          <br>
+          arxiv / project website / code
+          <p></p>
+          <p>In this work, we introduce a novel long-range polarization wavefront lidar sensor (PolLidar) that modulates the polarization of the emitted and received light.</p>
+          </td>
+          </tr>  
+
+          
+          <tr onmouseout="pde_stop()" onmouseover="pde_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='pde_image'>
+                  <img src='images/pde_after.png' width="160"></div>
+                <img src='images/pde_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function pde_start() {
+                  document.getElementById('pde_image').style.opacity = "1";
+                }
+          
+                function pde_stop() {
+                  document.getElementById('pde_image').style.opacity = "0";
+                }
+                videodepth_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>Robust Depth Enhancement via Polarization Prompt Fusion Tuning</papertitle>
+          </a>
+          <br>
+          Kei IKEMURA*, Yiming Huang*, Felix Heide, Zhaoxiang Zhang, <a href="http://cqf.io">Qifeng Chen†,</a>         <strong>Chenyang Lei†</strong>,
+          <br>
+          <em>CVPR</em>, 2024
+          <br>
+          arxiv / project website / code
+          <p></p>
+          <p></p>
+          <p></p>
+
+          <p>In this work, we present a general framework that leverages polarization imaging to improve inaccurate depth measurements from various depth sensors.</p>
+          </td>
+          </tr>  
+          
+            <tr onmouseout="imagination_stop()" onmouseover="imagination_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='imagination_image'>
+                    <img src='images/imagination_after.png' width="160"></div>
+                  <img src='images/imagination_before.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function imagination_start() {
+                    document.getElementById('imagination_image').style.opacity = "1";
+                  }
+  
+                  function imagination_stop() {
+                    document.getElementById('imagination_image').style.opacity = "0";
+                  }
+                  videodepth_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <papertitle>Automatic Controllable Colorization by Imagination</papertitle>
+                </a>
+                <br>
+                Xiaoyan Cong, Yue Wu,
+                <a href="http://cqf.io">Qifeng Chen†,</a>
+                <strong>Chenyang Lei†</strong>,
+                <br>
+                  <em>CVPR </em>, 2024 
+                <br>
+                <!-- <a href=""></a>  -->
+                arxiv / project website / code
+                <p></p>
+                <p>We present a novel approach to automatic image colorization by imitating the imagination process of human experts. </p>
+              </td>
+          </tr>  
+
 
           <tr onmouseout="nsf_stop()" onmouseover="nsf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -129,7 +263,7 @@
           <a href="https://light.princeton.edu/publication/nsf/">project website</a> / 
           <a href="https://github.com/princeton-computational-imaging/NSF">code</a> 
           <p></p>
-          <p>In this work, we use burst image stacks for layer separation. We represent a burst of images with a two-layer alpha-composited image plus flow model constructed with neural spline fields – networks trained to map input coordinates to spline control points.</p>
+          <p>In this work, we use burst image stacks for layer separation. We represent a burst of images with a two-layer alpha-composited image plus flow model constructed with neural spline fields networks trained to map input coordinates to spline control points.</p>
           </td>
           </tr> 
 
