@@ -120,10 +120,46 @@
 
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-
-
+          <tr onmouseout="simmat_stop()" onmouseover="simmat_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='simmat_image'>
+                  <img src='images/simmat_after.png' width="160"></div>
+                <img src='images/simmat_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function simmat_start() {
+                  document.getElementById('simmat_image').style.opacity = "1";
+                }
+          
+                function simmat_stop() {
+                  document.getElementById('simmat_image').style.opacity = "0";
+                }
+                simmat_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>SimMAT: Exploring Transferability from Vision Foundation Models to Any Image Modality
+            </papertitle>
+          </a>
+          <br>
+          <strong>Chenyang Lei*</strong>,
+          Liyi Chen*,
+          Jun Cen, Xiao Chen, Zhen Lei,  
+          Felix Heide, Ziwei Liu, Qifeng Chen, Zhaoxiang Zhang 
+          <br>
+          <em>arxiv</em>, 2024
+          <br>
+          <a href="https://arxiv.org/pdf/2409.08083">paper</a> / 
+          <a href="https://github.com/mt-cly/SimMAT/">project website</a> / 
+          <a href="https://github.com/mt-cly/SimMAT">code</a> 
+          <p></p>
+          <p>This work presents a simple and effective framework SimMAT to study an open problem: the
+            transferability from vision foundation models trained on natural RGB images to other image modalities of different physical
+            properties (e.g., polarization).</p>
+          </td>
+          </tr>  
+          
           <tr onmouseout="pollidar_stop()" onmouseover="pollidar_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -139,7 +175,7 @@
                 function pollidar_stop() {
                   document.getElementById('pollidar_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                pollidar_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -178,7 +214,7 @@
                 function pde_stop() {
                   document.getElementById('pde_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                pde_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -215,7 +251,7 @@
                   function imagination_stop() {
                     document.getElementById('imagination_image').style.opacity = "0";
                   }
-                  videodepth_stop()
+                  imagination_stop()
                 </script>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
@@ -254,7 +290,7 @@
                 function nsf_stop() {
                   document.getElementById('nsf_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                nsf_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -289,7 +325,7 @@
                 function metalens_stop() {
                   document.getElementById('metalens_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                metalens_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -324,7 +360,7 @@
                 function augmentation_stop() {
                   document.getElementById('augmentation_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                augmentation_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -362,7 +398,7 @@
                 function fatezero_stop() {
                   document.getElementById('fatezero_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                fatezero_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -402,7 +438,7 @@
                 function deflicker_stop() {
                   document.getElementById('deflicker_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                deflicker_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -440,7 +476,7 @@
                 function inv3d_stop() {
                   document.getElementById('inv3d_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                inv3d_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -480,7 +516,7 @@
                 function DVPvp_stop() {
                   document.getElementById('DVPvp_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                DVPvp_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -515,7 +551,7 @@
                 function sfp_stop() {
                   document.getElementById('sfp_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                sfp_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -557,7 +593,7 @@
                 function flash_stop() {
                   document.getElementById('flash_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                flash_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -594,7 +630,7 @@
                 function sim_stop() {
                   document.getElementById('sim_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                sim_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -634,7 +670,7 @@
                 function DVP_stop() {
                   document.getElementById('DVP_image').style.opacity = "0";
                 }
-                videodepth_stop()
+                DVP_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
