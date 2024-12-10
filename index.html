@@ -63,6 +63,7 @@
                       <!-- </heading> -->
                       <p>
                       <ul>
+                        <li>News (Dec 2024): One paper is accepted to AAAI 2025.</li>
                         <li>News (Oct 2024): Two papers are accepted to NeurIPS 2024.</li>
                         <li>News (Feb 2024): Four papers are accepted to CVPR 2024.</li>
                         <li>News (Dec 2023): A paper is accepted to AAAI 2024.</li>
@@ -97,7 +98,7 @@
                 <li><strong>Computational imaging and photography</strong></li>
                 <li><strong>Video processing, editing, and generation</strong></li>
                 <li><strong>3D from sensors and multiviews</strong></li>
-                <li><strong>Modality-agnostic foundation models</strong></li>
+                <li><strong>Multimodal Large Language Models</strong></li>
               </ul>
 
               <!-- <p>()</p> -->
@@ -140,27 +141,99 @@
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-            <papertitle>SimMAT: Exploring Transferability from Vision Foundation Models to Any Image Modality
+            <papertitle>SimCMF: A Simple Cross-modal Fine-tuning Strategy from Vision Foundation Models to Any Imaging Modality
             </papertitle>
           </a>
           <br>
           <strong>Chenyang Lei*</strong>,
           Liyi Chen*,
           Jun Cen, Xiao Chen, Zhen Lei,  
-          Felix Heide, Ziwei Liu, Qifeng Chen, Zhaoxiang Zhang 
+          Felix Heide, Qifeng Chen, Zhaoxiang Zhang 
           <br>
           <em>arxiv</em>, 2024
           <br>
-          <a href="https://arxiv.org/pdf/2409.08083">paper</a> / 
-          <a href="https://github.com/mt-cly/SimMAT/">project website</a> / 
-          <a href="https://github.com/mt-cly/SimMAT">code</a> 
+          <a href="https://arxiv.org/abs/2411.18669">paper</a> / 
+          <a href="https://github.com/mt-cly/SimCMF/">project website</a> / 
+          <a href="https://github.com/mt-cly/SimCMF">code</a> 
           <p></p>
-          <p>This work presents a simple and effective framework SimMAT to study an open problem: the
+          <p>This work presents a simple and effective framework SimCMF to study an open problem: the
             transferability from vision foundation models trained on natural RGB images to other image modalities of different physical
             properties (e.g., polarization).</p>
           </td>
           </tr>  
+
+
+          <tr onmouseout="pollidar_stop()" onmouseover="pollidar_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='pollidar_image'>
+                  <img src='images/vlc_after.png' width="160"></div>
+                <img src='images/vlc_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function pollidar_start() {
+                  document.getElementById('pollidar_image').style.opacity = "1";
+                }
           
+                function pollidar_stop() {
+                  document.getElementById('pollidar_image').style.opacity = "0";
+                }
+                pollidar_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>Vision-Language-Camera: Introducing Vision Language Models for Unleashing the Power of Camera Manual Mode
+            </papertitle>
+          </a>
+          <br>
+          Zian Qian, Zhili Chen, Mengxi Sun, Zhaoxiang Zhang, Qifeng Chen, <strong>Chenyang Lei</strong>
+          <br>
+          <em>In submission</em>, 2024
+          <br>
+          <a href="">paper</a> / 
+          <a href="">project website</a> / 
+          <a href="https://github.com/zqianaa/VLC">code</a> 
+          <p></p>
+          <p>We propose the Vision-Language-Camera Model (VLC), which introduces the vision-language model to camera manual mode and offers guidance on how to adjust camera parameters tailored to the user's specific needs.</p>
+          </td>
+          </tr>  
+
+          <tr onmouseout="firm_stop()" onmouseover="firm_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='firm_image'>
+                  <img src='images/firm_after.png' width="160"></div>
+                <img src='images/firm_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function firm_start() {
+                  document.getElementById('firm_image').style.opacity = "1";
+                }
+          
+                function firm_stop() {
+                  document.getElementById('firm_image').style.opacity = "0";
+                }
+                firm_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+            <papertitle>FIRM: Flexible Interactive Reflection ReMoval
+            </papertitle>
+          </a>
+          <br>
+          Xiao Chen, Xudong Jiang, Yunkang Tao, Zhen Lei, Qing Li, <strong>Chenyang Lei†</strong>, Zhaoxiang Zhang†
+          <br>
+          <em>AAAI</em>, 2024
+          <br>
+          <a href="">paper</a> / 
+          <a href="">project website</a> / 
+          <a href="">code</a> 
+          <p></p>
+          <p>This paper presents a novel framework for Flexible Interactive Reflection Removal with various forms of guidance, where users can provide sparse visual guidance (e.g., points, boxes, or strokes) or text descriptions for better reflection removal.</p>
+          </td>
+          </tr>  
+
+
           <tr onmouseout="pollidar_stop()" onmouseover="pollidar_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
