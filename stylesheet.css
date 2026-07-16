@@ -249,6 +249,32 @@ h2.section-title {
 .more-link a:hover { color: var(--accent-hover); }
 
 /* ---------- publications ---------- */
+.pub-toggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  margin-bottom: 26px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+.pub-toggle button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.pub-toggle button:hover { color: var(--text); }
+.pub-toggle button.active { background: var(--accent); color: #fff; }
+
+.pubs.show-selected .pub:not(.sel) { display: none; }
+
 .pub {
   display: grid;
   grid-template-columns: 150px 1fr;

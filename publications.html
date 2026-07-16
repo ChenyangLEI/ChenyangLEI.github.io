@@ -26,11 +26,16 @@
     </nav>
 
     <!-- ===================== PUBLICATIONS ===================== -->
-    <section>
+    <section class="pubs show-selected">
       <h2 class="section-title">Publications</h2>
 
+      <div class="pub-toggle" role="tablist">
+        <button type="button" class="active" data-view="selected">Selected</button>
+        <button type="button" data-view="all">All</button>
+      </div>
+
       <!-- Boogu-Image -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/boogu_image.png" alt="">
           <img class="after" src="images/boogu_image.png" alt="">
@@ -45,7 +50,7 @@
       </article>
 
       <!-- SimCMF -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/simmat_before.png" alt="">
           <img class="after" src="images/simmat_after.png" alt="">
@@ -60,7 +65,7 @@
       </article>
 
       <!-- VLC -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/vlc_before.png" alt="">
           <img class="after" src="images/vlc_after.png" alt="">
@@ -89,7 +94,7 @@
       </article>
 
       <!-- PolLidar -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/pollidar_before.png" alt="">
           <img class="after" src="images/pollidar_after.png" alt="">
@@ -149,7 +154,7 @@
       </article>
 
       <!-- Metalens -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/metalens-array.png" alt="">
           <img class="after" src="images/metalens-array.png" alt="">
@@ -164,7 +169,7 @@
       </article>
 
       <!-- Randomized Quantization -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/augmentation.png" alt="">
           <img class="after" src="images/augmentation.png" alt="">
@@ -254,7 +259,7 @@
       </article>
 
       <!-- Flash RR -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/flash_before.jpg" alt="">
           <img class="after" src="images/flash_after.jpg" alt="">
@@ -284,7 +289,7 @@
       </article>
 
       <!-- DVP -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/DVP_before.JPG" alt="">
           <img class="after" src="images/DVP_after.JPG" alt="">
@@ -329,7 +334,7 @@
       </article>
 
       <!-- Video Colorization -->
-      <article class="pub">
+      <article class="pub sel">
         <div class="thumb">
           <img class="before" src="images/Color_before.jpg" alt="">
           <img class="after" src="images/Color_after.jpg" alt="">
@@ -364,6 +369,19 @@
         root.setAttribute('data-theme', t);
         btn.textContent = (t === 'dark') ? '☀️' : '🌙';
       }
+    })();
+
+    (function () {
+      var seg = document.querySelector('.pub-toggle');
+      var pubs = document.querySelector('.pubs');
+      if (!seg || !pubs) return;
+      seg.addEventListener('click', function (e) {
+        var b = e.target.closest('button');
+        if (!b) return;
+        seg.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        pubs.classList.toggle('show-selected', b.dataset.view === 'selected');
+      });
     })();
   </script>
 
