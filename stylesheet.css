@@ -315,6 +315,8 @@ h2.section-title {
   font-size: 13px;
   color: var(--faint);
 }
+.footer .counter { margin: 0 0 18px; }
+.footer .counter a { color: var(--faint); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 600px) {
