@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1544" height="806" viewBox="0 0 1544 806" role="img" aria-labelledby="title">
+  <title id="title">PhotoMaster — Stay Tuned</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="1544" height="806" fill="url(#bg)"/>
+  <text x="772" y="368" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-1">Stay Tuned</text>
+  <text x="772" y="430" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="500" fill="#ffffff" fill-opacity=".62">敬请期待</text>
+</svg>
