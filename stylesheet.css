@@ -471,6 +471,14 @@ h2.section-title {
   transition: color .15s ease;
 }
 .research-work-row:hover .work-title-media > strong { color: var(--accent); }
+.work-role {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.4;
+}
 .work-title-media img {
   display: block;
   width: 100%;
@@ -548,11 +556,16 @@ h2.section-title {
 }
 .table-detail {
   display: block;
-  margin-top: 3px;
+  margin-top: 4px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 400;
 }
+.table-honor {
+  margin-top: 10px;
+  line-height: 1.55;
+}
+.table-honor + .table-honor { margin-top: 4px; }
 
 /* ---------- academic service and teaching ---------- */
 .service-layout {
@@ -757,6 +770,7 @@ h2.section-title {
 
 /* ---------- footer ---------- */
 .footer {
+  position: relative;
   margin-top: 72px;
   padding-top: 24px;
   border-top: 1px solid var(--border);
@@ -764,8 +778,17 @@ h2.section-title {
   font-size: 13px;
   color: var(--faint);
 }
-.footer .counter { margin: 0 0 18px; }
-.footer .counter a { color: var(--faint); }
+.visit-counter {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 600px) {
